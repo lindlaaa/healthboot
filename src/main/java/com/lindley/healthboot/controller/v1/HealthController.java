@@ -1,10 +1,10 @@
 package com.lindley.healthboot.controller.v1;
 
-import com.lindley.healthboot.EndpointService;
 import com.lindley.healthboot.controller.IHealthController;
 import com.lindley.healthboot.model.common.HealthEndpoint;
 import com.lindley.healthboot.model.common.response.EndpointResponse;
 import com.lindley.healthboot.model.common.response.HealthResponseAggregate;
+import com.lindley.healthboot.service.EndpointRetrievalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class HealthController implements IHealthController {
 
     @Autowired
-    EndpointService endopintService;
+    EndpointRetrievalService endopintService;
 
     @Override
     @RequestMapping(value = "/health", method = RequestMethod.GET)

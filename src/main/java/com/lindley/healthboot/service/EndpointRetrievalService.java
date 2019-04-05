@@ -1,4 +1,4 @@
-package com.lindley.healthboot;
+package com.lindley.healthboot.service;
 
 import com.lindley.healthboot.model.common.HealthEndpoint;
 import org.springframework.stereotype.Service;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 
 @Service
-public class EndpointService {
+public class EndpointRetrievalService {
 
     // TODO properties?
     private String discoveryUrl = "http://localhost:8081/endpoints/all";
