@@ -1,0 +1,21 @@
+server:
+  port: 9090
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+my:
+  endpoints:
+    - serviceName: HealthService
+      url: http://localhost:9091/actuator/health
+    - serviceName: HealthService2
+      url: http://localhost:9092/actuator/health
+    - serviceName: AddressBook
+      url: http://localhost:8081/actuator/health
+  name: TestConfig
+  suffix: Mr
+  attr:
+    - tis
+    - the
+    - noblest
